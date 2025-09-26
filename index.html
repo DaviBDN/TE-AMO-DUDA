@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100 Motivos para Amar a Eduarda Minha Uta dos zoi verde 💖🥹🙈
-
-    </title>
+    <title>100 Motivos para Amar a Eduarda</title>
     <style>
         * {
             margin: 0;
@@ -30,6 +28,28 @@
         header {
             margin-bottom: 40px;
             padding: 20px;
+        }
+        
+        /* FOTO DA EDUARDA */
+        .foto-eduarda {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .foto-perfil {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ff6b6b;
+            box-shadow: 0 0 30px rgba(255, 107, 107, 0.7);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
         
         h1 {
@@ -107,17 +127,25 @@
             .motivo {
                 padding: 12px;
             }
+            
+            .foto-perfil {
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
+            <!-- FOTO DA EDUARDA -->
+            <div class="foto-eduarda">
+                <img src="imagem/eduarda.jpg" alt="Foto da Eduarda" class="foto-perfil">
+            </div>
+            
             <h1>100 MOTIVOS PARA AMAR</h1>
             <div class="subtitle">
-                <span> Minha uta dos zoi verde 🙈💖
-                
-                </span>
+                <span>Minha Uta dos zoi verde 🥹😍</span>
                 <span class="heart">❤️</span>
             </div>
         </header>
