@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Motivos para Amar a Eduarda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ff6b6b;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: #ffd700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .heart {
+            color: #ff6b6b;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .motivos-list {
+            text-align: left;
+            display: grid;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .motivo {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b6b;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .numero {
+            background: #ff6b6b;
+            color: #000;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            color: #888;
+        }
+        
+        /* Responsivo */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .motivo {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>100 MOTIVOS PARA AMAR</h1>
+            <div class="subtitle">
+                <span>Eduarda</span>
+                <span class="heart">❤️</span>
+            </div>
+        </header>
+        
+        <div class="motivos-list" id="motivosList">
+            <!-- Os motivos serão inseridos pelo JavaScript -->
+        </div>
+        
+        <footer>
+            <p>Feito com muito carinho 💕</p>
+        </footer>
+    </div>
+
+    <script>
+        // Lista de 100 motivos para amar a Eduarda
+        const motivos = [
+            "1. Seu sorriso ilumina meu dia",
+            "2. A forma como você se importa com os outros",
+            "3. Sua inteligência e perspicácia",
+            "4. O jeito único que você tem de me entender",
+            "5. Sua força diante das dificuldades",
+            "6. A maneira como seus olhos brilham quando está feliz",
+            "7. Sua honestidade em todas as situações",
+            "8. O carinho que você demonstra",
+            "9. Sua determinação em alcançar objetivos",
+            "10. A paciência que você tem comigo",
+            "11. Seu senso de humor incrível",
+            "12. A forma como canta baixinho sem perceber",
+            "13. Sua capacidade de tornar simples momentos especiais",
+            "14. O cuidado que tem com as pequenas coisas",
+            "15. Sua voz suave e acolhedora",
+            "16. A maneira como luta pelo que acredita",
+            "17. Seu abraço que transmite segurança",
+            "18. A forma como valoriza a família",
+            "19. Sua criatividade em resolver problemas",
+            "20. O brilho especial que você traz à minha vida",
+            "21. Sua humildade mesmo nas conquistas",
+            "22. A maneira como me inspira a ser melhor",
+            "23. Seu cheiro que me acalma",
+            "24. A forma como cuida de quem ama",
+            "25. Sua risada contagiante",
+            "26. A paciência para me ouvir",
+            "27. Seu olhar que transmite mil sentimentos",
+            "28. A maneira como enfrenta desafios",
+            "29. Sua lealdade incondicional",
+            "30. O carinho nos gestos mais simples",
+            "31. Sua sensibilidade artística",
+            "32. A forma como me surpreende",
+            "33. Seu coração generoso",
+            "34. A maneira como dança sem vergonha",
+            "35. Sua companhia que é um presente",
+            "36. O jeito como me apoia",
+            "37. Sua capacidade de perdoar",
+            "38. A forma como aquece meu coração",
+            "39. Seu jeito único de ser",
+            "40. A maneira como transforma dias comuns em especiais",
+            "41. Sua coragem em ser autêntica",
+            "42. O cuidado com suas palavras",
+            "43. Seu amor pela vida",
+            "44. A forma como me completa",
+            "45. Sua paixão pelos seus hobbies",
+            "46. O jeito como me faz rir",
+            "47. Sua ternura nos momentos difíceis",
+            "48. A maneira como me conhece melhor que eu mesmo",
+            "49. Seu toque que cura",
+            "50. A forma como me faz sentir amado",
+            "51. Sua sabedoria além dos anos",
+            "52. O brilho nos olhos quando fala do que ama",
+            "53. Sua capacidade de ouvir o não dito",
+            "54. A maneira como me desafia a crescer",
+            "55. Seu cheiro de casa",
+            "56. A forma como me surpreende com pequenos gestos",
+            "57. Sua paciência infinita",
+            "58. O jeito como cuida dos animais",
+            "59. Seu amor pela natureza",
+            "60. A maneira como me faz sentir em casa",
+            "61. Sua voz que acalma minha alma",
+            "62. A forma como luta por justiça",
+            "63. Seu sorriso tímido",
+            "64. O carinho com que trata os idosos",
+            "65. Sua determinação incansável",
+            "66. A maneira como me entende sem palavras",
+            "67. Seu abraço que é meu porto seguro",
+            "68. A forma como valoriza a amizade",
+            "69. Sua capacidade de encontrar beleza no simples",
+            "70. O jeito como me inspira todos os dias",
+            "71. Seu olhar cheio de esperança",
+            "72. A maneira como enfrenta medos",
+            "73. Sua risada que ecoa na memória",
+            "74. A forma como me faz querer ser melhor",
+            "75. Seu cheiro que é meu favorito",
+            "76. O cuidado com seus sonhos",
+            "77. Sua maneira única de amar",
+            "78. A forma como me completa",
+            "79. Seu toque que acalma",
+            "80. O jeito como me surpreende sempre",
+            "81. Sua paciência para ensinar",
+            "82. A maneira como celebra pequenas vitórias",
+            "83. Seu coração que transborda amor",
+            "84. A forma como me faz sentir especial",
+            "85. Sua inteligência emocional",
+            "86. O brilho que você traz ao mundo",
+            "87. Seu jeito carinhoso de cuidar",
+            "88. A maneira como transforma o comum em extraordinário",
+            "89. Sua força silenciosa",
+            "90. A forma como me entende profundamente",
+            "91. Seu sorriso que cura",
+            "92. O jeito como me faz sentir em paz",
+            "93. Sua capacidade de amar incondicionalmente",
+            "94. A maneira como ilumina qualquer lugar",
+            "95. Seu abraço que diz tudo",
+            "96. A forma como me completa",
+            "97. Sua presença que é um presente",
+            "98. O jeito como me faz acreditar no amor",
+            "99. Seu coração puro e verdadeiro",
+            "100. Simplesmente por ser você, Eduarda! ❤️"
+        ];
+
+        // Função para carregar os motivos
+        function carregarMotivos() {
+            const lista = document.getElementById('motivosList');
+            
+            motivos.forEach(motivo => {
+                const div = document.createElement('div');
+                div.className = 'motivo';
+                
+                // Extrai o número do motivo
+                const numero = motivo.split('.')[0];
+                const texto = motivo.substring(motivo.indexOf(' ') + 1);
+                
+                div.innerHTML = `
+                    <div class="numero">${numero}</div>
+                    <span>${texto}</span>
+                `;
+                
+                lista.appendChild(div);
+            });
+        }
+
+        // Carrega os motivos quando a página abre
+        carregarMotivos();
+    </script>
+</body>
+</html>
